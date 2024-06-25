@@ -1,24 +1,24 @@
 import random
 def rps():
-    arr = ['Rock', 'Paper', 'Scissors']
-    userChoice = input('Rock, Paper, or Scissors?')
+    arr = ['rock', 'paper', 'scissors']
+    userChoice = input('Rock, Paper, or Scissors?').lower()
     computer = random.choice(arr)
     if userChoice == computer:
         return f"You chose {userChoice} and computer chose {computer}, its a TIE!"
-    if userChoice == 'Rock':
-        if computer == 'Paper':
+    if userChoice == 'rock':
+        if computer == 'paper':
             outcome = 'LOSE'
-        if computer == 'Scissors':
+        if computer == 'scissors':
             outcome = 'WIN'
-    if userChoice == 'Paper':
-        if computer == 'Rock':
+    if userChoice == 'paper':
+        if computer == 'rock':
             outcome = 'WIN'
-        if computer == 'Scissors':
+        if computer == 'scissors':
            outcome = 'LOSE'
-    if userChoice == 'Scissors':
-        if computer == 'Rock':
+    if userChoice == 'scissors':
+        if computer == 'rock':
             outcome = 'LOSE'
-        if computer == 'Paper':
+        if computer == 'paper':
             outcome = 'WIN'
     return f"You chose {userChoice} and computer chose {computer}, YOU {outcome}"
 print(rps())
