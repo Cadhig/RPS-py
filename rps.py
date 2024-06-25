@@ -4,7 +4,7 @@ def rps():
     userChoice = input('Rock, Paper, or Scissors?')
     computer = random.choice(arr)
     if userChoice == computer:
-        return 'Tie!'
+        return f"You chose {userChoice} and computer chose {computer}, its a TIE!"
     if userChoice == 'Rock':
         if computer == 'Paper':
             outcome = 'LOSE'
