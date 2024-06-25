@@ -7,18 +7,18 @@ def rps():
         return 'Tie!'
     if userChoice == 'Rock':
         if computer == 'Paper':
-            return 'You chose ROCK and computer chose PAPER, YOU LOSE!'
+            outcome = 'LOSE'
         if computer == 'Scissors':
-            return 'You chose ROCK and computer chose SCISSORS, YOU WIN!'
+            outcome = 'WIN'
     if userChoice == 'Paper':
         if computer == 'Rock':
-            return 'You chose PAPER and computer chose ROCK, YOU WIN!'
+            outcome = 'WIN'
         if computer == 'Scissors':
-            return 'You chose PAPER and computer chose SCISSORS, YOU LOSE!'
+           outcome = 'LOSE'
     if userChoice == 'Scissors':
         if computer == 'Rock':
-            return 'You chose SCISSORS and computer chose ROCK, YOU LOSE!'
+            outcome = 'LOSE'
         if computer == 'Paper':
-            return 'You chose SCISSORS and computer chose PAPER, YOU WIN!'
-    return 'go again'
+            outcome = 'WIN'
+    return f"You chose {userChoice} and computer chose {computer}, YOU {outcome}"
 print(rps())
